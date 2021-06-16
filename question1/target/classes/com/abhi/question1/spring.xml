@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+<!-- <bean id="address1" class="com.abhi.question1.Address">  
+<property name="street" value="Khao Gali"></property>  
+<property name="city" value="Kolkata"></property>  
+<property name="state" value="WB"></property>
+<property name="zip" value="700050"></property>    
+<property name="country" value="India"></property>  
+</bean>  
+  
+<bean id="obj" class="com.abhi.question1.Customer">  
+<property name="id" value="1"></property>  
+<property name="name" value="Abhijeet Kumar"></property>  
+<property name="address" ref="address1"></property>
+<property name="contact" value="012345679"></property>  
+</bean>   -->
+<bean id="a1" class="com.abhi.question1.Address">  
+<constructor-arg value="Khao Gali"></constructor-arg>  
+<constructor-arg value="Kolkata"></constructor-arg>  
+<constructor-arg value="WB"></constructor-arg>  
+<constructor-arg value="700050"></constructor-arg>  
+<constructor-arg value="India"></constructor-arg>  
+</bean>  
+  
+  
+<bean id="e" class="com.abhi.question1.Customer">  
+<constructor-arg value="1" type="int"></constructor-arg>  
+<constructor-arg value="Abhijeet Kumar"></constructor-arg>  
+<constructor-arg>  
+<ref bean="a1"/>  
+</constructor-arg> 
+<constructor-arg value="0123456789"></constructor-arg>   
+</bean>  
+  
+  
+</beans>  
